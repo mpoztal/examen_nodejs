@@ -1,0 +1,36 @@
+extends ../layout.pug 
+
+block content 
+    div.container
+        h1 AGENTS 
+        <a class="btn btn-warning" href="/agents/new">New Agent</a>
+    table.table.table-striped
+        thead.table
+            tr 
+                th Id
+                th Name
+                th Surnames
+                th Address
+                th Email
+                th Phone
+               
+                
+                
+        tbody 
+            each agent in agents
+                tr 
+                    td= agent.id
+                    td= agent.name
+                    td= agent.surnames
+                    td= agent.address
+                    td= agent.email
+                    td= agent.phone 
+                    td 
+                        a.btn.btn-yellow.info.btn-sm(href="/agents/"+agent.id)
+                            i.bi-eye
+                        a.btn.btn-yellow.btn-sm(href="/agents/edit/"+agent.id)
+                            i.bi-pencil-square 
+                        a.btn.btn-yellow.btn-sm(href="/agents/delete/"+agent.id, 
+                        onclick="return confirm('You're sure?')")
+                            i.bi-trash3 
+

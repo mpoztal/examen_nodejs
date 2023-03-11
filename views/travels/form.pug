@@ -1,0 +1,19 @@
+extends ../layout.pug
+block content
+    h2 New Travel   
+    form(action="/travels/create", method="post")
+        .mb-3
+            label.form-label Destination Country
+            input.form-control(type="text", name="destination_country")
+        .mb-3
+            label.form-label Destination City
+            input.form-control(type="text", name="destination_city")
+        .mb-3
+            label.form-label Length of Stay
+            input.form-control(type="text", name="length_of_stay")
+        .mb-3
+            label.form-label Price
+            input.form-control(type="text", name="price")          
+        input(type="submit", value="Send")
+        
+

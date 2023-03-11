@@ -1,0 +1,30 @@
+extends ../layout.pug
+block content
+    h2 Edit Client  
+    form(action="/clients/update", method="post")
+        .mb-3
+            label.form-label Name
+            input.form-control(type="text", name="name", value=client.name)
+        .mb-3
+            label.form-label Surnames
+            input.form-control(type="text", name="surnames", value=client.surnames)
+        .mb-3
+            label.form-label Address
+            input.form-control(type="text", name="address", value=client.address)
+        .mb-3
+            label.form-label Email
+            input.form-control(type="text", name="email", value=client.email)   
+        .mb-3
+            label.form-label DNI
+            input.form-control(type="text", name="dni", value=client.dni)
+        .mb-3
+            label.form-label Phone
+            input.form-control(type="text", name="phone", value=client.phone)
+        .mb-3
+            label.form-label Postal Code
+            input.form-control(type="text", name="postal_code", value=client.postal_code)
+        .mb-3
+            label.form-label City
+            input.form-control(type="text", name="city", value=client.city)
+            input(type="hidden" name="clientId", value=client.id)
+        input(type="submit", value="Send")

@@ -1,0 +1,33 @@
+extends ../layout.pug 
+
+block content
+    div.container
+        h1 CLIENTS 
+        <a class="btn btn-warning" href="/clients/new">New Client</a>
+    table.table.table-striped
+        thead.table
+            tr                 
+                th Name
+                th Surnames
+                th Email
+                th Phone
+
+
+                
+                
+        tbody 
+            each client in clients
+                tr 
+                    td= client.name
+                    td= client.surnames
+                    td= client.email
+                    td= client.phone 
+                    td 
+                        a.btn.btn-yellow.info.btn-sm(href="/clients/"+client.id)
+                            i.bi-eye
+                        a.btn.btn-yellow.btn-sm(href="/clients/edit/"+client.id)
+                            i.bi-pencil-square 
+                        a.btn.btn-yellow.btn-sm(href="/clients/delete/"+client.id, 
+                        onclick="return confirm('You're sure?')")
+                            i.bi-trash3 
+

@@ -1,0 +1,18 @@
+extends ../layout.pug
+block content
+    h2 Edit Travel  
+    form(action="/travels/update", method="post")
+        .mb-3
+            label.form-label Destination Country
+            input.form-control(type="text", name="destination_country", value=travel.destination_country)
+        .mb-3
+            label.form-label Destination City
+            input.form-control(type="text", name="destination_city", value=travel.destination_city)
+        .mb-3
+            label.form-label Length of Stay
+            input.form-control(type="text", name="length_of_stay", value=travel.length_of_stay)
+        .mb-3
+            label.form-label Price
+            input.form-control(type="text", name="price", value=travel.price)          
+            input(type="hidden" name="travelId", value=travel.id)
+        input(type="submit", value="Send")

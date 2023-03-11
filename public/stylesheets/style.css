@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: rgb(162, 187, 95);
+ 
+}
+
+i {
+  color: black;
+  font-size: 1rem;
+  background: rgb(162, 187, 95);
+}
+
+h1 {
+  background: rgb(162, 187, 95);  
+}

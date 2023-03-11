@@ -1,0 +1,33 @@
+extends ../layout.pug 
+
+block content 
+    div.container
+        h1 TRAVELS 
+        <a class="btn btn-warning" href="/travels/new">New Travel</a>
+    table.table.table-striped
+        thead.table
+            tr 
+                th Destination Country
+                th Destination City
+                th Length of Stay
+                th Price
+                
+               
+                
+                
+        tbody 
+            each travel in travels
+                tr 
+                    td= travel.destination_country
+                    td= travel.destination_city
+                    td= travel.length_of_stay
+                    td= travel.price
+                    td 
+                        a.btn.btn-yellow.info.btn-sm(href="/travels/"+travel.id)
+                            i.bi-eye
+                        a.btn.btn-yellow.btn-sm(href="/travels/edit/"+travel.id)
+                            i.bi-pencil-square 
+                        a.btn.btn-yellow.btn-sm(href="/travels/delete/"+travel.id, 
+                        onclick="return confirm('You're sure?')")
+                            i.bi-trash3 
+

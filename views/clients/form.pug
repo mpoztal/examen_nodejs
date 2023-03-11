@@ -1,0 +1,31 @@
+extends ../layout.pug
+block content
+    h2 New Client 
+    form(action="/clients/create", method="post")
+        .mb-3
+            label.form-label Name
+            input.form-control(type="text", name="name")
+        .mb-3
+            label.form-label Surnames
+            input.form-control(type="text", name="surnames")
+        .mb-3
+            label.form-label Address
+            input.form-control(type="text", name="address")
+        .mb-3
+            label.form-label Email
+            input.form-control(type="text", name="email")   
+        .mb-3
+            label.form-label DNI
+            input.form-control(type="text", name="dni")
+        .mb-3
+            label.form-label Phone
+            input.form-control(type="text", name="phone")
+        .mb-3
+            label.form-label Postal Code
+            input.form-control(type="text", name="postal_code")
+            .mb-3
+            label.form-label City
+            input.form-control(type="text", name="city")
+        input(type="submit", value="Send")
+        
+

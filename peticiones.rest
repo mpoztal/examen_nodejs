@@ -1,0 +1,95 @@
+GET http://localhost:3000/api/clients
+
+###
+GET http://localhost:3000/api/agents
+
+###
+GET http://localhost:3000/api/travels
+
+###
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    
+    "surnames": "Torres Villa",
+    "address": "Castilla 25",
+    "email": "ursulatorre@gmail.com",
+    "dni" : "52163227",
+    "phone": "630225430",
+    "postal_code": "12",
+    "city": "Málaga"
+}
+
+###
+POST http://localhost:3000/api/agents
+Content-Type: application/json
+
+{
+    "name": "Diego",
+    "surnames": "Perez Quevedo",
+    "address": "Marques 83",
+    "email": "diego122@gmail.com",    
+    "phone": "650806235"
+    
+}
+
+###
+POST http://localhost:3000/api/travels
+Content-Type: application/json
+
+{
+    "destination_country": "Spain",
+    "destination_city": "Madrid",
+    "length_of_stay": "4",
+    "price": "2500.50"  
+}
+
+###
+PUT http://localhost:3000/api/clients/21
+Content-Type: application/json
+
+{
+    "name": "Ursula",
+    "surnames": "Torres Villa",
+    "address": "Pintor 20",
+    "email": "ursulator@gmail.com",
+    "dni" : "52163227g",
+    "phone": "630506227",
+    "postal_code": "38007",
+    "city": "Málaga"
+}
+
+###
+PUT http://localhost:3000/api/agents/5
+Content-Type: application/json
+
+{
+
+    "name": "Gilberte",
+    "surnames": "Riches",
+    "address": "Flores 15",
+    "email": "griches4@trellian.com",
+    "phone": "841-171-2755"
+    
+}
+
+###
+PUT http://localhost:3000/api/travels/19
+Content-Type: application/json
+
+{
+    "destination_country": "China",
+    "destination_city": "Jihuluntu Sumu",
+    "length_of_stay": "5",
+    "price": "4000.52" 
+}
+
+###
+DELETE http://localhost:3000/api/clients/18
+
+###
+DELETE http://localhost:3000/api/agents/13
+
+###
+DELETE http://localhost:3000/api/travels/14

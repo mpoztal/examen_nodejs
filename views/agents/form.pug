@@ -1,0 +1,22 @@
+extends ../layout.pug
+block content
+    h2 New Agent  
+    form(action="/agents/create", method="post")
+        .mb-3
+            label.form-label Name
+            input.form-control(type="text", name="name")
+        .mb-3
+            label.form-label Surnames
+            input.form-control(type="text", name="surnames")
+        .mb-3
+            label.form-label Address
+            input.form-control(type="text", name="address")
+        .mb-3
+            label.form-label Email
+            input.form-control(type="text", name="email")          
+        .mb-3
+            label.form-label Phone
+            input.form-control(type="text", name="phone")
+        input(type="submit", value="Send")
+        
+

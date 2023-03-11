@@ -1,0 +1,21 @@
+extends ../layout.pug
+block content
+    h2 Edit Agent  
+    form(action="/agents/update", method="post")
+        .mb-3
+            label.form-label Name
+            input.form-control(type="text", name="name", value=agent.name)
+        .mb-3
+            label.form-label Surnames
+            input.form-control(type="text", name="surnames", value=agent.surnames)
+        .mb-3
+            label.form-label Address
+            input.form-control(type="text", name="address", value=agent.address)
+        .mb-3
+            label.form-label Email
+            input.form-control(type="text", name="email", value=agent.email)   
+        .mb-3
+            label.form-label Phone
+            input.form-control(type="text", name="phone", value=agent.phone)
+            input(type="hidden" name="agentId", value=agent.id)
+        input(type="submit", value="Send")
